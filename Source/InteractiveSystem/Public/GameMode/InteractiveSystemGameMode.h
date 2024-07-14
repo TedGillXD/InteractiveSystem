@@ -13,6 +13,13 @@ class AInteractiveSystemGameMode : public AGameModeBase
 
 public:
 	AInteractiveSystemGameMode();
+
+	// Functions for Room 1
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category="Room1 Funcs")
+	bool CheckStatueStatus();
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category="Room1 Funcs")
+	void GenerateRoom1Key();
 };
 
 

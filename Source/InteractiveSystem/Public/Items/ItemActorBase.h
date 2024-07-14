@@ -22,7 +22,7 @@ protected:
 	UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Category="ItemActor Props")
 	UStaticMeshComponent* MeshComponent;		// 物体的Mesh
 
-	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category="ItemActor Props")
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category="ItemActor Props", meta=(ExposeOnSpawn = true))
 	int32 Count;		// 物品的数量
 	
 protected:

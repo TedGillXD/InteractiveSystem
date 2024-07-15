@@ -29,11 +29,12 @@ ARevolvingDoor::ARevolvingDoor()
 
 void ARevolvingDoor::OnLeverStatusChanged(bool bIsOn) {
 	if(bIsOn) {
+		Door->SetSimulatePhysics(true);
 		PhysicsConstraintComponent->SetAngularVelocityTarget({0.f, 0.f, 0.5f});
 		Door->WakeRigidBody();
 	} else {
+		Door->SetSimulatePhysics(false);
 		PhysicsConstraintComponent->SetAngularVelocityTarget({0.f, 0.f, 0.f});
-		Door->WakeRigidBody();
 	}
 }
 
